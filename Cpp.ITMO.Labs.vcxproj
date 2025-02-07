@@ -127,7 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Cpp.ITMO.Labs.cpp" />
+    <ClCompile Include="Lab2Contr.cpp" />
+    <ClCompile Include="Lab2Practic.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
