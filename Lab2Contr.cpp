@@ -45,24 +45,24 @@ vector<int> super_primes(int limit) {
 
 //lab2 
     bool isValidSnils(const std::string& snils) {
-    if (snils.length() != 11) { // Проверка длины строки(11)
+    if (snils.length() != 11) { 
         return false;
     }
 
     for (size_t i = 0; i < 7; ++i) {
         if (snils[i] == snils[i + 1] && snils[i] == snils[i + 2]) {
-            return false;     // Проверка на одинаковые цифры
+            return false;     
         }
     }
 
     int sum = 0;
     for (size_t i = 0; i < 9; ++i) {
-        sum += (snils[i] - '0') * (9 - i); // Расчёт суммы согласно условию
+        sum += (snils[i] - '0') * (9 - i);
     }
 
     int controlNumber = 0;
     if (sum < 100) {
-        controlNumber = sum; // Вычисляем контрольное число
+        controlNumber = sum; 
     }
     else if (sum == 100 || sum == 101) {
         controlNumber = 0; 
@@ -94,10 +94,10 @@ vector<int> super_primes(int limit) {
         }
 
         
-        std::cout << "Необходимые монеты для выдачи суммы: " << std::endl;
+        std::cout << "Coins to issue the amount: " << std::endl;
         for (size_t i = 0; i < coins.size(); ++i) {
             if (coinCount[i] > 0) {
-                std::cout << coins[i] << " руб. - " << coinCount[i] << " шт." << std::endl;
+                std::cout << coins[i] << " rub. - " << coinCount[i] << std::endl;
             }
         }
     }
@@ -108,13 +108,13 @@ vector<int> super_primes(int limit) {
 
 string getShooterLevel(int score) {
     if (score >= 50) {
-        return "Снайпер";
+        return "The sniper";
     }
     else if (score >= 30) {
-        return "Стрелок";
+        return "Shooter";
     }
     else {
-        return "Новичок";
+        return "Beginner";
     }
 }
 
@@ -122,13 +122,13 @@ string getShooterLevel(int score) {
 int checkHit(double x, double y, double targetX, double targetY) {
     double distance = sqrt(pow(x - targetX, 2) + pow(y - targetY, 2));
     if (distance <= 5) { 
-        return 10; //10 очков
+        return 10; 
     }
     else if (distance <= 10) {
-        return 5; //5 очков
+        return 5; 
     }
     else {
-        return 0;  // промах
+        return 0; 
     }
 }
 
@@ -145,7 +145,7 @@ int main() {
     /*int limit = 1000;
     vector<int> result = super_primes(limit);
 
-    cout << "Суперпростые числа до " << limit << ": ";
+    cout << "Super simple numbers up to " << limit << ": ";
     for (int sp : result) {
         cout << sp << " ";
     }
@@ -155,14 +155,14 @@ int main() {
     //lab2 
 
     /*std::string snils;
-    std::cout << "Введите номер СНИЛС: ";
+    std::cout << "Begin SNILS number: ";
     std::cin >> snils;
 
     if (isValidSnils(snils)) {
-        std::cout << "Номер СНИЛС валиден." << std::endl;
+        std::cout << "SNILS are valid" << std::endl;
     }
     else {
-        std::cout << "Номер СНИЛС невалиден." << std::endl;
+        std::cout << "SNILS are not valid" << std::endl;
     }
 
     return 0;*/
@@ -170,11 +170,11 @@ int main() {
     //Lab3 
 
    /* int amount;
-    std::cout << "Введите сумму для выдачи (в рублях): ";
+    std::cout << "Enter the amount to be issued (in rubles): ";
     std::cin >> amount;
 
     if (amount < 0) {
-        std::cout << "Сумма не может быть отрицательной." << std::endl;
+        std::cout << "The amount cannot be negative" << std::endl;
         return 1;
     }
 
@@ -189,17 +189,17 @@ int main() {
     //srand(static_cast<unsigned int>(time(0))); 
     //double targetX = rand() % 101; 
     //double targetY = rand() % 101; 
-    //cout << "Центр мишени находится в (" << targetX << ", " << targetY << ")" << endl;
+    //cout << "The center of the target is located in(" << targetX << ", " << targetY << ")" << endl;
     //int totalScore = 0;
     //int shotsFired = 0;
     //while (totalScore < 50) { 
     //    double x, y;
-    //    cout << "Введите координату x: ";
+    //    cout << "Enter the coordinate x: ";
     //    cin >> x;
-    //    cout << "Введите координату y: ";
+    //    cout << "Enter the coordinate y: ";
     //    cin >> y;
 
-    //    // Случайная помеха
+    //    
     //    double noiseX = ((rand() % 601) / 100.0) - 7; 
     //    double noiseY = ((rand() % 601) / 100.0) - 7;  
     //    x += noiseX; 
@@ -209,16 +209,16 @@ int main() {
     //    totalScore += score;
     //    shotsFired++;
     //    if (score > 0) {
-    //        cout << "Попадание! Вы заработали " << score << " очков." << endl;
+    //        cout << "Hit! You've earned it" << score << " очков." << endl;
     //    }
     //    else {
-    //        cout << "Промах!" << endl;
+    //        cout << "A miss!" << endl;
     //    }
-    //    cout << "Текущий счет: " << totalScore << " очков." << endl;
+    //    cout << "Current account: " << totalScore << " points" << endl;
     //}
-    //cout << "Вы сделали " << shotsFired << " выстрелов и набрали " << totalScore << " очков." << endl;
+    //cout << "You did" << shotsFired << " shots and scored " << totalScore << " points" << endl;
     //string level = getShooterLevel(totalScore);
-    //cout << "Ваш уровень стрелка: " << level << endl;
+    //cout << "Your arrow level: " << level << endl;
     //return 0;
 
      
