@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
-#include<windows.h>
+
 
 using namespace std;
  
@@ -42,13 +42,13 @@ long double firBinSearch(double a, int n)
 }
 
 int addNumbers(int n) {
-    if (n == 1) return 1; // выход из рекурсии
-    else return (n + addNumbers(n - 1)); // рекурсивный вызов
+    if (n == 1) return 1; 
+    else return (n + addNumbers(n - 1)); 
 }
 
 int addNumbers(int start, int end) {
-    if (start > end) return 0; // если начальное больше конечного, возвращаем 0
-    return start + addNumbers(start + 1, end); // рекурсивный вызов от start до end
+    if (start > end) return 0; 
+    return start + addNumbers(start + 1, end); 
 }
 
 int gcd(int m, int n)
@@ -59,8 +59,8 @@ int gcd(int m, int n)
 
 int main()
 {
-    SetConsoleOutputCP(1251);
-    SetConsoleCP(1251);
+   /* SetConsoleOutputCP(1251);
+    SetConsoleCP(1251);*/
     
     //lab1 , lab2 
 
