@@ -57,8 +57,8 @@ int gcd(int m, int n)
     return gcd(n, m % n);
 }
 
-int main()
-{
+//int main()
+//{
    /* SetConsoleOutputCP(1251);
     SetConsoleCP(1251);*/
     
@@ -96,7 +96,7 @@ int main()
 
     // lab4 
 
-    int n;
+   /* int n;
     cout << "Введите положительное целое число: ";
     cin >> n;
 
@@ -132,8 +132,8 @@ int main()
     int resultGCD = gcd(m, n_gcd);
     cout << "Наибольший общий делитель чисел " << m << " и " << n_gcd << " равен " << resultGCD << endl;
 
-    return 0;
+    return 0;*/
 
 
-}
+//}
 
